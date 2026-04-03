@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HPlusSport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>HPlusSport</h1>
+    
+    <div class="search-section">
+      <input type="text" id="searchName" placeholder="Search by product name...">
+      <input type="number" id="searchPrice" placeholder="Search by price...">
+    </div>
+    
+    <div class="form-section">
+      <h3>Create/Update Product</h3>
+      <label>ID: <input type="number" id="prodId" placeholder="Product ID"></label>
+      <label>Name: <input type="text" id="prodName" placeholder="Product Name"></label>
+      <label>Description: <input type="text" id="prodDesc" placeholder="Product Description"></label>
+      <label>Price: <input type="number" id="prodPrice" placeholder="Product Price" step="0.01"></label>
+      <label>Category: <input type="number" id="prodCategory" placeholder="Category ID"></label>
+      <label>SKU: <input type="text" id="prodSku" placeholder="Product SKU"></label>
+      <label>Available: <input type="checkbox" id="prodAvailable" checked></label>
+      <div>
+        <button onclick="createProduct()">Create</button>
+        <button onclick="updateProduct()">Update</button>
+        <button onclick="getProductById()">Get by ID</button>
+        <button onclick="deleteProduct()">Delete</button>
+      </div>
+    </div>
+    
+    <div id="products"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
